@@ -326,4 +326,39 @@ header{
     justify-content: end;
     grid-gap: 2rem;
   }
+
+
+  
+  /**** 制定活動區 banner 樣式 ****/
+  /* grid 重新排版 */
+  .banner-wrapper{
+    grid-template-areas:
+    "main main main left"
+    "main main main right";
+
+    grid-gap: 1.5rem;
+  }
+
+  /* flex 重新排版 */
+  .main-banner{
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  /* 細部微調文字樣式 */
+  .main-banner .banner-title {
+    font-size:4rem;
+  }
+
+  .main-banner .banner-description {
+    font-size:2rem;
+  }
+
+  .sub-banner .banner-description {
+    font-size: 1.2rem;
+  }
+
+ 
+
+
 }
