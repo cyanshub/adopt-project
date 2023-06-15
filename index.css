@@ -56,3 +56,41 @@ a {
   text-decoration: none;
 }
 
+
+
+/***** 撰寫專案共用樣式:手機板 *****/
+/* 區塊 */
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+/* 共用按鈕樣式 */
+.action {
+  color: white;
+  background: #39bae6;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  transition: all 0.1s linear;
+}
+
+
+/* 共用背景圖片樣式 */
+.background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+/***** 撰寫專案共用樣式:電腦版 *****/
+@media screen and (min-width:768px){
+  /* 共用按鈕樣式 */
+  .action {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+}
