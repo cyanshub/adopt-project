@@ -200,6 +200,16 @@ header{
 }
 
 
+
+/**** 制定活動區 banner 樣式 ****/
+.banner-wrapper {
+  padding-top: 92px;
+}
+
+
+
+
+
 /***** 撰寫專案共用樣式:電腦版 *****/
 @media screen and (min-width:768px){
   /* 共用按鈕樣式 */
