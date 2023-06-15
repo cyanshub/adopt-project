@@ -1,0 +1,58 @@
+/* 載入 google font 字體 */
+@import url('https: //fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/* 設定 box 計算模式 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 清除瀏覽器預設 viewport */
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 設定順暢滑動 */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* 設定網頁主體 */
+body {
+  background-color: #F6F7F8;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* 統一設定 h 元素 */
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+
+/* 統一設定 p 元素 */
+p {
+  margin: 0;
+}
+
+/* 統一設定 ul, li 元素 */
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 去除超連結預設底線 */
+a {
+  text-decoration: none;
+}
+
