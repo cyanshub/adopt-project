@@ -130,6 +130,74 @@ header{
 }
 
 
+/* 制定漢堡排選單: 使用 :checked 控制被勾選時的樣式 */
+.nav {
+  /* 預設收合 */
+  transform: scale(1,0);
+
+  /* 利用 transition 打造轉場效果 */
+  transform-origin: top; 
+  transition: transform .3s ease-out;
+
+}
+
+.navbar-toggle:checked ~ .nav {
+  /* Check 時展開 */
+  transform: scale(1, 1);
+}
+
+.nav-item {
+  opacity: 0;
+}
+
+.navbar-toggle:checked ~ .nav .nav-item {
+  transition: opacity .3s ease-out .15s;
+  opacity: 1;
+}
+
+
+/* label 之漢堡排樣式 */
+.navbar-toggle-label {
+  position: absolute;
+  top: 0; /* 讓元素高度與父元素相等-> 絕對定位的top與bottom設定為零  */
+  bottom: 0; /* 讓元素高度與父元素相等-> 絕對定位的top與bottom設定為零  */
+  right: 7.5%; /* 與畫面右側保持 7.5% 的距離 */
+
+  display: flex;
+  align-items: center;
+}
+
+
+.hamburger, .hamburger::before, .hamburger::after {
+  width: 30px;
+  height: 3px;
+  background: #267b98;
+  content: "";
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: 8px;
+}
+
+.hamburger::after {
+  bottom: 8px;
+}
+
+
+/* 隱藏 checkbox navbar-toggle */
+.navbar-toggle {
+  position: absolute;
+  visibility: hidden;
+}
 
 
 /***** 撰寫專案共用樣式:電腦版 *****/
