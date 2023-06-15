@@ -101,6 +101,36 @@ header{
 }
 
 
+/**** 制定導覽列樣式 ****/
+.nav {
+  /* 基本樣式 */
+  width: 100%;
+  background: #ffffff;
+
+  /* 定位 */
+  position: absolute;
+  top: 100%;
+}
+
+
+/* 基本樣式 */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 60px;
+  color: #267b98;
+}
+
+.nav-item {
+  margin: 1.4rem 0;
+}
+
+.nav-link {
+  color: #267b98;
+}
+
+
+
 
 /***** 撰寫專案共用樣式:電腦版 *****/
 @media screen and (min-width:768px){
