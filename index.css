@@ -204,9 +204,78 @@ header{
 /**** 制定活動區 banner 樣式 ****/
 .banner-wrapper {
   padding-top: 92px;
+
+  /* 大略排版 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 0.5rem;
+
+  grid-template-areas:
+  "main main main main"
+  "left left right right";
 }
 
 
+/* 將 grid-item 標記 grid-area 並命名 */
+.main-banner {
+  grid-area: main;
+  background-image: url("https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1285&q=80");
+}
+
+.sub-banner-left {
+  grid-area: left;
+  background-image: url("https://images.unsplash.com/photo-1569809317138-8d2ff6060c4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+}
+
+.sub-banner-right {
+  grid-area: right;
+  background-image: url("https://images.unsplash.com/photo-1535294435445-d7249524ef2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+}
+
+.main-banner, .sub-banner {
+  padding: 1rem;
+
+  /* 細部排版 */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: end;
+  align-items: end;
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.08);
+}
+
+/* banner 文字樣式與按鈕樣式微調 */
+.banner-title{
+  margin-bottom: 0.4rem;
+}
+
+.banner-description{
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.main-banner .banner-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #1a5366;
+}
+.main-banner .banner-description {
+  font-size: 1rem;
+  color: #267b98;
+}
+
+.sub-banner .banner-title,
+.sub-banner .banner-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.sub-banner .action {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+}
 
 
 
