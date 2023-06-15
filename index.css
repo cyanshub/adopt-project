@@ -207,4 +207,44 @@ header{
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
   }
+
+  /**** 制定 header 樣式 ****/
+  /* 移除漢堡排 */
+  .navbar-toggle-label {
+    display: none;
+  }
+
+  /* 還原 nav 樣式 */
+  .nav {
+    all:unset;
+  }
+
+  .nav-item {
+    opacity: 1;
+    margin: 0;
+  }
+
+  /* 宣告 grid container */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  /* grid 定位 */
+  .navbar-brand {
+    grid-column: 2/3;
+  }
+
+
+  .nav-list {
+    grid-column: 3/4;
+
+    /* 導覽列項目細部排版 */
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: end;
+    grid-gap: 2rem;
+  }
 }
