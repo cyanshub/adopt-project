@@ -518,7 +518,28 @@ header{
     font-size: 1.2rem;
   }
 
- 
 
 
+  /**** 制定領養資訊 adoption 樣式 ****/
+  /* grid 重新排版 */
+  .adoption-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+  }
+
+  /* 細部排版 */
+  .adoption-info {
+    justify-items: start;
+  }
+
+  /* 微調文字樣式 */
+  .adoption-title {
+    font-size: 3rem;
+  }
+
+  .adoption-description {
+    font-size: 1.625rem;
+  }
+  
 }
