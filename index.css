@@ -354,6 +354,45 @@ header{
 }
 
 
+/* 設計圖卡特效邊框 */
+.card::before, .card::after {
+  /* 往內平移邊框 */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  content: ""; /* 使偽元素顯現 */
+
+  /* 設定轉場特效 transition */
+  transition: transform .4s ease-out;
+}
+
+/* 顯現上下邊框 */
+.card::before {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: scale(0,1); /* 預設收合 */
+}
+
+/* 顯現左右邊框 */
+.card::after {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform: scale(1,0); /* 預設收合 */
+}
+
+/* 圖卡轉場特效邊框: 展開邊框 */
+.card:hover.card::before{
+  transform: scale(1.05,1);
+}
+
+.card:hover.card::after{
+  transform: scale(1, 1.05);
+}
+
+
+
 /***** 撰寫專案共用樣式:電腦版 *****/
 @media screen and (min-width:768px){
   /* 共用按鈕樣式 */
