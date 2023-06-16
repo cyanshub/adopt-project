@@ -239,10 +239,15 @@ header{
   /* 細部排版 */
   display: flex;
   flex-flow: column wrap;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.08);
 }
+
+.main-banner {
+  justify-content: flex-start;
+}
+
 
 /* banner 文字樣式與按鈕樣式微調 */
 .banner-title{
@@ -259,6 +264,7 @@ header{
   font-size: 2rem;
   color: #1a5366;
 }
+
 .main-banner .banner-description {
   font-size: 1rem;
   color: #267b98;
@@ -389,6 +395,46 @@ header{
 
 .card:hover.card::after{
   transform: scale(1, 1.05);
+}
+
+
+/**** 制定領養資訊 adoption 樣式 ****/
+.adoption-wrapper {
+  width: 100%;
+
+  /* 大略排版 */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 135px;
+
+  /* 樣式 */
+  background-color: #fff;
+  box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.1);
+}
+
+.adoption-image {
+  width: 100%;
+}
+
+.adoption-info {
+  /* 大略排版 */
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding: 1.2rem;
+}
+
+/* 設計文案樣式 */
+.adoption-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.4rem;
+  color: #267c99;
+}
+
+.adoption-description {
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+  color: #5e5c5c;
 }
 
 
